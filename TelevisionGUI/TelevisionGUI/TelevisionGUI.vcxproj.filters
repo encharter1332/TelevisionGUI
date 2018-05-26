@@ -36,9 +36,45 @@
     <ClCompile Include="TelevisionGUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="device_params.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="display_device.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Projector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="smarttv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="speakers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="television.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="working_params.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_TelevisionGUI.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TVForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="TelevisionGUI.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AddObject.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TVForm.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -46,10 +82,42 @@
     <QtUic Include="TelevisionGUI.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="AddObject.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="TVForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="TelevisionGUI.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="projector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="working_params.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="television.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="device_params.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="smarttv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="display_device.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TelevisionGUI.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

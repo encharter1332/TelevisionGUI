@@ -1,29 +1,250 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>TelevisionGUIClass</class>
- <widget class="QMainWindow" name="TelevisionGUIClass" >
-  <property name="objectName" >
-   <string notr="true">TelevisionGUIClass</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QMainWindow" name="TelevisionGUIClass">
+  <property name="geometry">
    <rect>
-	<x>0</x>
-	<y>0</y>
-	<width>600</width>
-	<height>400</height>
+    <x>0</x>
+    <y>0</y>
+    <width>774</width>
+    <height>470</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
    <string>TelevisionGUI</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>50</y>
+      <width>131</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybierz obiekt aby wyświetlić zdjęcie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zdjęcie Obiektu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_exit">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>370</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Wyjście</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_edit">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>260</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Edytuj obiekt</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_save">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>90</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Zapisz kolekcje</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_load">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>160</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Wczytaj kolekcje</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_add">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dodaj nowy obiekt</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_delete">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>190</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Usun Obiekt</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>0</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Pregladany obiekt</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>151</width>
+      <height>391</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListView" name="listView">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>50</y>
+      <width>201</width>
+      <height>361</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources>
-   <include location="TelevisionGUI.qrc"/>
+  <include location="TelevisionGUI.qrc"/>
  </resources>
- <connections/>
-</UI>
+ <connections>
+  <connection>
+   <sender>pushButton_save</sender>
+   <signal>clicked()</signal>
+   <receiver>TelevisionGUIClass</receiver>
+   <slot>saveObjects()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>112</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>TelevisionGUIClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>392</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_load</sender>
+   <signal>clicked()</signal>
+   <receiver>TelevisionGUIClass</receiver>
+   <slot>loadObjects()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_add</sender>
+   <signal>clicked()</signal>
+   <receiver>TelevisionGUIClass</receiver>
+   <slot>addObjects()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>saveObjects()</slot>
+  <slot>loadObjects()</slot>
+  <slot>addObjects()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddObject</class>
+ <widget class="QDialog" name="AddObject">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>257</width>
+    <height>351</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AddObject</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_television">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Telewizor</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_smarttv">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>180</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SmartTV</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_projector">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>260</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Projektor</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>50</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Wybierz typ obiektu :</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_television</sender>
+   <signal>clicked()</signal>
+   <receiver>AddObject</receiver>
+   <slot>newTV()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>newTV()</slot>
+ </slots>
+</ui>
