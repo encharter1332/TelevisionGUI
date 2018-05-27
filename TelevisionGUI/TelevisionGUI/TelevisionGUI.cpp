@@ -87,10 +87,14 @@ void TelevisionGUI::saveObjects() {
 
 void TelevisionGUI::addObjects() {
 	AddObject addWindow;
+	setVisible(false);
 	addWindow.exec();
 	if (addWindow.Accepted)
-		collection.push_back(addWindow.getDevicePointer());
-	drawList();
+		setVisible(true);
+		if (addWindow.getDevicePointer() != nullptr) {
+			collection.push_back(addWindow.getDevicePointer());
+			drawList();
+		}
 	
 }
 

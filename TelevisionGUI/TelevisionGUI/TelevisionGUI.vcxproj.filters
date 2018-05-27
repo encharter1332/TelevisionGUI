@@ -63,9 +63,6 @@
     <ClCompile Include="AddObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TVForm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="TelevisionGUI.h">
@@ -74,18 +71,12 @@
     <QtMoc Include="AddObject.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="TVForm.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="TelevisionGUI.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="AddObject.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="TVForm.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

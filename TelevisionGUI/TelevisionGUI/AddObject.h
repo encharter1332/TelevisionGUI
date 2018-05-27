@@ -6,6 +6,7 @@
 #include "television.h"
 #include "smarttv.h"
 #include "projector.h"
+#include "vector"
 
 class AddObject : public QDialog
 {
@@ -18,10 +19,18 @@ public:
 	DisplayDevice* getDevicePointer() { return createdDevice; };
 
 	public slots:
-	void newTV();
-	void newSmart();
-	void newProjector();
+	Television* newTV();
+	SmartTv* newSmart();
+	Projector* newProjector();
+	void checkText();
+	void checkAppInput();
+	void drawAppList();
+	void onAddApp();
+	void onRemoveApp();
+	void appSelected();
+	void submitForm();
 	
 private:
 	Ui::AddObject ui;
+	vector <string> apps;
 };

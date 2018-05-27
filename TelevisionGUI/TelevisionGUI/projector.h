@@ -75,6 +75,9 @@ public :
 	
 	///Operator strumieniowy >>
 	friend istream& operator >> (std::istream &stream, Projector &projector);
+
+	///Ustaw jasnosc
+	void setScreenBrightness(int newBrightness) { workingParams->setScreenBrightness(newBrightness); };
 	
 	///Destruktor
 	~Projector();

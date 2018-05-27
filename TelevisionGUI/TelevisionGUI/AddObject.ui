@@ -6,57 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>257</width>
-    <height>351</height>
+    <width>764</width>
+    <height>660</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>AddObject</string>
   </property>
-  <widget class="QPushButton" name="pushButton_television">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>100</y>
-     <width>161</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Telewizor</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_smarttv">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>180</y>
-     <width>161</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>SmartTV</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_projector">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>260</y>
-     <width>161</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Projektor</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>50</y>
+     <x>50</x>
+     <y>30</y>
      <width>151</width>
      <height>20</height>
     </rect>
@@ -70,28 +31,2356 @@
     <string>Wybierz typ obiektu :</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_cancel">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>600</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Anuluj</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_add">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>600</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dodaj</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>70</y>
+     <width>701</width>
+     <height>501</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_tv">
+    <attribute name="title">
+     <string>Telewizor</string>
+    </attribute>
+    <widget class="QFrame" name="frame_tv">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>0</y>
+       <width>361</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <widget class="QLabel" name="label_13">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Typ ekranu: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_model">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>60</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>domyslny</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_producer">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>20</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>domyslny</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>280</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Zasilanie :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Model:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Glosniki :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Sygnal:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_screen">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>220</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>domyslny</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>250</y>
+        <width>641</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_volume">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>420</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ocena:</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_signal">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>340</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_signalOff">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wylaczony</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_signalOn">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wlaczony</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_power">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>280</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_pwrOn">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wlaczone</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_pwrOff">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wylaczone</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Jasnosc ekranu:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_brightness">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>310</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_rating">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>100</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="Line" name="line_5">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>651</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Producent:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_width">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>180</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>8000</number>
+      </property>
+      <property name="singleStep">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_speakers">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>390</y>
+        <width>201</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_SpeakersOn">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Podpiete</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_SpeakersOff">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Odpiete</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Szerokosc ekranu:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>420</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Glosnosc:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Wysokosc ekranu:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_height">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>140</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>8000</number>
+      </property>
+      <property name="singleStep">
+       <number>100</number>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_projector">
+    <attribute name="title">
+     <string>Projektor</string>
+    </attribute>
+    <widget class="QFrame" name="frame_projector">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>0</y>
+       <width>361</width>
+       <height>461</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <widget class="QLineEdit" name="lineEdit_model_projector">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>60</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>domyslny</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_producer_projector">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>20</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>domyslny</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>370</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Zasilanie :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Model:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>430</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Sygnal:</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_6">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ocena:</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_signal_projector">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>430</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_signalOff_projector">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wylaczony</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_signalOn_projector">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wlaczony</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_power_projector">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>370</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_pwrOn_projector">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wlaczone</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_pwrOff_projector">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wylaczone</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>400</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Jasnosc ekranu:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_brightness_projector">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>400</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_rating_projector">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>100</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Producent:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_width_projector">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>180</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>8000</number>
+      </property>
+      <property name="singleStep">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Szerokosc ekranu:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Wysokosc ekranu:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_height_projector">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>140</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>8000</number>
+      </property>
+      <property name="singleStep">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_43">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Wydajnosc lampy:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_44">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Zoom:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_45">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Rotacja ekranu:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_lampefficency">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>220</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_zoom">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>260</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="prefix">
+       <string>x</string>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_rotation">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>300</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="suffix">
+       <string>°</string>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="maximum">
+       <number>360</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_smart">
+    <attribute name="title">
+     <string>SmartTV</string>
+    </attribute>
+    <widget class="QFrame" name="frame_smart">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>681</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <widget class="QLabel" name="label_24">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Typ ekranu: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_model_smart">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>60</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>domyslny</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_producer_smart">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>20</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>domyslny</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>280</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Zasilanie :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Model:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Glosniki :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Sygnal:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_screen_smart">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>220</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>domyslny</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_7">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>250</y>
+        <width>351</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_volume_smart">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>420</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ocena:</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_signal_smart">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>340</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_signalOff_smart">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wylaczony</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_signalOn_smart">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wlaczony</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_power_smart">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>280</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_pwrOn_smart">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wlaczone</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_pwrOff_smart">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wylaczone</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_38">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Jasnosc ekranu:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_brightness_smart">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>310</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_rating_smart">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>100</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="Line" name="line_8">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>361</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_39">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Producent:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_width_smart">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>180</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>8000</number>
+      </property>
+      <property name="singleStep">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_speakers_smart">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>390</y>
+        <width>201</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="radioButton_SpeakersOn_smart">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Podpiete</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_SpeakersOff_smart">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>0</y>
+         <width>82</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Odpiete</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_40">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Szerokosc ekranu:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_41">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>420</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Glosnosc:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_42">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Wysokosc ekranu:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_height_smart">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>140</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>8000</number>
+      </property>
+      <property name="singleStep">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_46">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>20</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Wersja softu:</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_soft">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>20</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="value">
+       <double>1.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="listWidget_apps">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>160</y>
+        <width>201</width>
+        <height>281</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>80</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Aplikacje :</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_addapp">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>120</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>Resources/plus.ico</normaloff>Resources/plus.ico</iconset>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_apps">
+      <property name="geometry">
+       <rect>
+        <x>382</x>
+        <y>120</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Domyslna aplikacja</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_removeapp">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>120</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>Resources/minus.ico</normaloff>Resources/minus.ico</iconset>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton_television</sender>
+   <sender>pushButton_cancel</sender>
    <signal>clicked()</signal>
    <receiver>AddObject</receiver>
-   <slot>newTV()</slot>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>130</x>
-     <y>130</y>
+     <x>445</x>
+     <y>615</y>
     </hint>
     <hint type="destinationlabel">
-     <x>128</x>
-     <y>175</y>
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_pwrOn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_brightness</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>402</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_pwrOn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>radioButton_signalOn</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>372</x>
+     <y>432</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_pwrOn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>radioButton_signalOff</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>432</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_SpeakersOn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_volume</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>482</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>512</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_pwrOn_projector</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>radioButton_signalOff_projector</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>532</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_pwrOn_projector</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>radioButton_signalOn_projector</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>372</x>
+     <y>532</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_pwrOn_projector</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_brightness_projector</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>502</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_pwrOn_smart</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>radioButton_signalOff_smart</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>192</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>272</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_pwrOn_smart</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_brightness_smart</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>192</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>212</x>
+     <y>412</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_SpeakersOn_smart</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_volume_smart</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>192</x>
+     <y>492</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>212</x>
+     <y>522</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_pwrOn_smart</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>radioButton_signalOn_smart</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>192</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_model</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>AddObject</receiver>
+   <slot>checkText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_screen</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>AddObject</receiver>
+   <slot>checkText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_producer</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>AddObject</receiver>
+   <slot>checkText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tabWidget</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>AddObject</receiver>
+   <slot>checkText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>320</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_model_projector</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>AddObject</receiver>
+   <slot>checkText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_producer_projector</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>AddObject</receiver>
+   <slot>checkText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_producer_smart</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>AddObject</receiver>
+   <slot>checkText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_screen_smart</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>AddObject</receiver>
+   <slot>checkText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_model_smart</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>AddObject</receiver>
+   <slot>checkText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_apps</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>AddObject</receiver>
+   <slot>checkAppInput()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>499</x>
+     <y>221</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_addapp</sender>
+   <signal>clicked()</signal>
+   <receiver>AddObject</receiver>
+   <slot>onAddApp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>612</x>
+     <y>222</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_removeapp</sender>
+   <signal>clicked()</signal>
+   <receiver>AddObject</receiver>
+   <slot>onRemoveApp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>642</x>
+     <y>222</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_apps</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>AddObject</receiver>
+   <slot>appSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>552</x>
+     <y>392</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_add</sender>
+   <signal>clicked()</signal>
+   <receiver>AddObject</receiver>
+   <slot>submitForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>615</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>329</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
   <slot>newTV()</slot>
+  <slot>checkText()</slot>
+  <slot>checkAppInput()</slot>
+  <slot>drawAppList()</slot>
+  <slot>onAddApp()</slot>
+  <slot>onRemoveApp()</slot>
+  <slot>appSelected()</slot>
+  <slot>submitForm()</slot>
  </slots>
 </ui>

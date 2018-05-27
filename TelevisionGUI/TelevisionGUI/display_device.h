@@ -53,6 +53,10 @@ public:
 	void setScreenWidth(int newWidth) { deviceParams.setScreenWidth(newWidth); };
 	void setScreenType(string newType) { deviceParams.setScreenType(newType); };
 
+	///Ustawianie modelu i producenta
+	void setModel(string newModel) { model = newModel; };
+	void setProducer(string newProducer) { producer = newProducer; };
+
 protected:
 	///Klasa Parametry urzadzenia
 	DeviceParams deviceParams;
