@@ -138,7 +138,7 @@
      <string>Pregladany obiekt</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QListWidget" name="listWidget_objects">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -148,7 +148,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QListView" name="listView">
+   <widget class="QListWidget" name="listWidget_info">
     <property name="enabled">
      <bool>false</bool>
     </property>
@@ -159,6 +159,9 @@
       <width>201</width>
       <height>361</height>
      </rect>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::NoSelection</enum>
     </property>
    </widget>
   </widget>
@@ -241,10 +244,78 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>listWidget_objects</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>TelevisionGUIClass</receiver>
+   <slot>checkIfObjectSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_objects</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>TelevisionGUIClass</receiver>
+   <slot>showSelectedObject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_delete</sender>
+   <signal>clicked()</signal>
+   <receiver>TelevisionGUIClass</receiver>
+   <slot>onDeleteClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>425</x>
+     <y>222</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_edit</sender>
+   <signal>clicked()</signal>
+   <receiver>TelevisionGUIClass</receiver>
+   <slot>onEditClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>425</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>saveObjects()</slot>
   <slot>loadObjects()</slot>
   <slot>addObjects()</slot>
+  <slot>showSelectedObject()</slot>
+  <slot>checkIfObjectSelected()</slot>
+  <slot>onDeleteClick()</slot>
+  <slot>onEditClick()</slot>
  </slots>
 </ui>

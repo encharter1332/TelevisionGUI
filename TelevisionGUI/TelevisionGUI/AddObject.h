@@ -14,6 +14,7 @@ class AddObject : public QDialog
 
 public:
 	AddObject(QWidget *parent = Q_NULLPTR);
+	AddObject(DisplayDevice *device_to_edit);
 	~AddObject();
 	DisplayDevice* createdDevice = nullptr;
 	DisplayDevice* getDevicePointer() { return createdDevice; };
@@ -29,6 +30,7 @@ public:
 	void onRemoveApp();
 	void appSelected();
 	void submitForm();
+	void editSubmit();
 	
 private:
 	Ui::AddObject ui;

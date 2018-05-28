@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>AddObject</string>
   </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -70,7 +73,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab_tv">
     <attribute name="title">
@@ -1163,6 +1166,9 @@
         <width>81</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="suffix">
+       <string>%</string>
       </property>
       <property name="minimum">
        <number>0</number>

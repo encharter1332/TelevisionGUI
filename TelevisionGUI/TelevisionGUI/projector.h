@@ -16,23 +16,23 @@ private :
 	int lamp_efficiency;
 	
 	///Zmienna przechowujaca wartosc zoom'u ekranu
-	double screen_zoom;
+	int screen_zoom;
 	
 	///Zmienna przechowujaca wartosc rotacji ekranu
-	double rotation;
-	
-	///Wskaznik na parametry pracy(czy obiekt wlaczony ,czy jest sygnal)
-	WorkingParams *workingParams;
+	int rotation;
 
 public :
 	///Konstruktor
 	Projector();
 	
 	///Funkcja zwracajaca zoom ekranu
-	double getDisplayZoom() { return screen_zoom; };
+	int getDisplayZoom() { return screen_zoom; };
 	
 	///Funkcja zwracajaca rotacje ekranu
-	double getDisplayRotation() { return rotation; };
+	int getDisplayRotation() { return rotation; };
+
+	///funkcja zwracajaca wydajnosc lampy
+	int getLampEfficiency() { return lamp_efficiency; };
 	
 	///Funkcja ustawiajaca rotacje na wartosc new_rotation
 	void setDisplayRotation(double new_rotation) { rotation = new_rotation; }

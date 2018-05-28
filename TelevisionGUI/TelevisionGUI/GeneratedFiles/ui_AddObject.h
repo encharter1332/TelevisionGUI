@@ -141,6 +141,7 @@ public:
         if (AddObject->objectName().isEmpty())
             AddObject->setObjectName(QStringLiteral("AddObject"));
         AddObject->resize(764, 660);
+        AddObject->setWindowOpacity(1);
         label = new QLabel(AddObject);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(50, 30, 151, 20));
@@ -755,6 +756,7 @@ public:
         label_43->setText(QApplication::translate("AddObject", "Wydajnosc lampy:", nullptr));
         label_44->setText(QApplication::translate("AddObject", "Zoom:", nullptr));
         label_45->setText(QApplication::translate("AddObject", "Rotacja ekranu:", nullptr));
+        spinBox_lampefficency->setSuffix(QApplication::translate("AddObject", "%", nullptr));
         spinBox_zoom->setPrefix(QApplication::translate("AddObject", "x", nullptr));
         spinBox_rotation->setSuffix(QApplication::translate("AddObject", "\302\260", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_projector), QApplication::translate("AddObject", "Projektor", nullptr));

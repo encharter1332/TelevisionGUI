@@ -45,6 +45,8 @@ public:
 	
 	///Funkcja zapisujaca do pliku
 	void save(fstream &file); 
+
+	vector <string> getApps() { return apps; };
 	
 	///Destruktor
 	~SmartTv();

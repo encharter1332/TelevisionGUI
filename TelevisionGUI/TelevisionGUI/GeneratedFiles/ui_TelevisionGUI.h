@@ -16,7 +16,6 @@
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
@@ -38,8 +37,8 @@ public:
     QPushButton *pushButton_add;
     QPushButton *pushButton_delete;
     QLabel *label;
-    QListWidget *listWidget;
-    QListView *listView;
+    QListWidget *listWidget_objects;
+    QListWidget *listWidget_info;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -81,13 +80,14 @@ public:
         QFont font;
         font.setPointSize(16);
         label->setFont(font);
-        listWidget = new QListWidget(centralWidget);
-        listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(170, 20, 151, 391));
-        listView = new QListView(centralWidget);
-        listView->setObjectName(QStringLiteral("listView"));
-        listView->setEnabled(false);
-        listView->setGeometry(QRect(520, 50, 201, 361));
+        listWidget_objects = new QListWidget(centralWidget);
+        listWidget_objects->setObjectName(QStringLiteral("listWidget_objects"));
+        listWidget_objects->setGeometry(QRect(170, 20, 151, 391));
+        listWidget_info = new QListWidget(centralWidget);
+        listWidget_info->setObjectName(QStringLiteral("listWidget_info"));
+        listWidget_info->setEnabled(false);
+        listWidget_info->setGeometry(QRect(520, 50, 201, 361));
+        listWidget_info->setSelectionMode(QAbstractItemView::NoSelection);
         TelevisionGUIClass->setCentralWidget(centralWidget);
         mainToolBar = new QToolBar(TelevisionGUIClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -101,6 +101,10 @@ public:
         QObject::connect(pushButton_exit, SIGNAL(clicked()), TelevisionGUIClass, SLOT(close()));
         QObject::connect(pushButton_load, SIGNAL(clicked()), TelevisionGUIClass, SLOT(loadObjects()));
         QObject::connect(pushButton_add, SIGNAL(clicked()), TelevisionGUIClass, SLOT(addObjects()));
+        QObject::connect(listWidget_objects, SIGNAL(itemClicked(QListWidgetItem*)), TelevisionGUIClass, SLOT(checkIfObjectSelected()));
+        QObject::connect(listWidget_objects, SIGNAL(itemClicked(QListWidgetItem*)), TelevisionGUIClass, SLOT(showSelectedObject()));
+        QObject::connect(pushButton_delete, SIGNAL(clicked()), TelevisionGUIClass, SLOT(onDeleteClick()));
+        QObject::connect(pushButton_edit, SIGNAL(clicked()), TelevisionGUIClass, SLOT(onEditClick()));
 
         QMetaObject::connectSlotsByName(TelevisionGUIClass);
     } // setupUi

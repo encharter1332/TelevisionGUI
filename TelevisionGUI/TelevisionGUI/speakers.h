@@ -23,6 +23,9 @@ public:
 	
 	///Funkcja zwracajaca poziom glosnosci (volume_level)
 	int getVolumeLevel() { return volume_level; };
+
+	///Funkcja zwracajaca czyglosniki sa podpiete
+	bool getSpeakersStatus() { return arePlugged; };
 	
 	///Funkcja zmniejszajaca glosnosc o 1 
 	void turnDownVolume();

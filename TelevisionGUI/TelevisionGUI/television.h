@@ -60,15 +60,6 @@ public:
 	///Funkcja wczytujaca obiekt z pliku
 	void load(fstream &file);
 	
-	///Funkcja zwracajaca zmienna model urzadzenia
-	string getModel() { return model; };
-	
-	///Funkcja zwracajaca producenta urzadzenia
-	string getProducer() { return producer; };
-	
-	///Funkcja zwracajaca ocene urzadzenia
-	int getRating() { return rating; };
-	
 	///Funkcja zwracajaca ilosc obiektow
 	static int getObjectAmount() { return object_amount; };
 	
@@ -108,16 +99,17 @@ public:
 	///Operator -- zmniejsza ocene o 1
 	Television& operator --(int);
 
-	///Ustaw jasnosc
-	void setScreenBrightness(int newBrightness) { workingParams->setScreenBrightness(newBrightness); };
+
 
 	///Opcje Speakers
 	void setSpeakersVolume(int newVolume) { speakers.setVolume(newVolume); };
 	void setSpeakersStatus(bool plugged) { speakers.setPlugged(plugged); };
 
+	///Get Speakers
+	bool getSpeakersStatus() { return speakers.getSpeakersStatus(); };
+	bool getVolumeLevel() { return speakers.getVolumeLevel(); };
+
 protected:
-	///Zmienna zawierajaca wskaznik na parametry pracy (WorkingParams)
-	WorkingParams * workingParams;
 	
 	///zmienna zawierajaca obiekt typu Speakers
 	Speakers speakers;

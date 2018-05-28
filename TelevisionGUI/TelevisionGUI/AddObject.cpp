@@ -5,8 +5,87 @@ AddObject::AddObject(QWidget *parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
-	drawAppList();
 }
+
+AddObject::AddObject(DisplayDevice *device_to_edit) {
+	ui.setupUi(this);
+	ui.pushButton_add->disconnect();
+	createdDevice = device_to_edit;
+	connect(ui.pushButton_add,SIGNAL(clicked()),this,SLOT(editSubmit()));
+	if (device_to_edit->getDeviceType() == "Television") {
+		ui.tabWidget->removeTab(1); /// Liczby wynikaja z przesuwania sie kolejnosci kolejnych zakladek poniewaz 0 - zakladka dla telewizora 1 - zakladka dla projektora 2 - zakladka dla SmartTV
+		ui.tabWidget->removeTab(1);
+		/// Formularz wypelniamy wartosciami z obiektu
+		ui.lineEdit_model->setText(QString::fromStdString(device_to_edit->getModel()));
+		ui.lineEdit_producer->setText(QString::fromStdString(device_to_edit->getProducer()));
+		ui.lineEdit_screen->setText(QString::fromStdString(device_to_edit->getScreenType()));
+		ui.spinBox_rating->setValue(device_to_edit->getRating());
+		ui.spinBox_height->setValue(device_to_edit->getScreenHeight());
+		ui.spinBox_width->setValue(device_to_edit->getScreenWidth());
+		if (device_to_edit->getWorkingParams() != NULL) {
+			ui.radioButton_pwrOn->toggle();
+			ui.spinBox_brightness->setValue(device_to_edit->getScreenBrightness());
+			if (device_to_edit->getSignal()) {
+				ui.radioButton_signalOn->toggle();
+			}
+		}
+		if (Television *temporary_tv = dynamic_cast <Television*> (device_to_edit)) { /// Wykonujemy dynamic cast aby dostac odpowiednie funkcje
+			if (temporary_tv->getSpeakersStatus()) {
+				ui.radioButton_SpeakersOn->toggle();
+				ui.spinBox_volume->setValue(temporary_tv->getVolumeLevel());
+			}
+		}
+	}
+	else if (device_to_edit->getDeviceType() == "Projector") {
+		ui.tabWidget->removeTab(0);
+		ui.tabWidget->removeTab(1);
+		/// Formularz wypelniamy wartosciami z obiektu
+		ui.lineEdit_model_projector->setText(QString::fromStdString(device_to_edit->getModel()));
+		ui.lineEdit_producer_projector->setText(QString::fromStdString(device_to_edit->getProducer()));
+		ui.spinBox_rating_projector->setValue(device_to_edit->getRating());
+		ui.spinBox_height_projector->setValue(device_to_edit->getScreenHeight());
+		ui.spinBox_width_projector->setValue(device_to_edit->getScreenWidth());
+		if (device_to_edit->getWorkingParams() != NULL) {
+			ui.radioButton_pwrOn_projector->toggle();
+			ui.spinBox_brightness_projector->setValue(device_to_edit->getScreenBrightness());
+			if (device_to_edit->getSignal()) {
+				ui.radioButton_signalOn_projector->toggle();
+			}
+		}
+		if (Projector *temporary_projector = dynamic_cast <Projector*> (device_to_edit)) { /// Wykonujemy dynamic cast aby dostac odpowiednie funkcje
+			ui.spinBox_lampefficency->setValue(temporary_projector->getLampEfficiency());
+			ui.spinBox_zoom->setValue(temporary_projector->getDisplayZoom());
+			ui.spinBox_rotation->setValue(temporary_projector->getDisplayRotation());
+		}
+	}
+		else if (device_to_edit->getDeviceType() == "SmartTV") {
+			ui.tabWidget->removeTab(0);
+			ui.tabWidget->removeTab(0);
+			/// Formularz wypelniamy wartosciami z obiektu
+			ui.lineEdit_model_smart->setText(QString::fromStdString(device_to_edit->getModel()));
+			ui.lineEdit_producer_smart->setText(QString::fromStdString(device_to_edit->getProducer()));
+			ui.lineEdit_screen_smart->setText(QString::fromStdString(device_to_edit->getScreenType()));
+			ui.spinBox_rating_smart->setValue(device_to_edit->getRating());
+			ui.spinBox_height_smart->setValue(device_to_edit->getScreenHeight());
+			ui.spinBox_width_smart->setValue(device_to_edit->getScreenWidth());
+			if (device_to_edit->getWorkingParams() != NULL) {
+				ui.radioButton_pwrOn_smart->toggle();
+				ui.spinBox_brightness_smart->setValue(device_to_edit->getScreenBrightness());
+				if (device_to_edit->getSignal()) {
+					ui.radioButton_signalOn_smart->toggle();
+				}
+			}
+			if (SmartTv *temporary_smart = dynamic_cast <SmartTv*> (device_to_edit)) { /// Wykonujemy dynamic cast aby dostac odpowiednie funkcje
+				if (temporary_smart->getSpeakersStatus()) {
+					ui.radioButton_SpeakersOn_smart->toggle();
+					ui.spinBox_volume_smart->setValue(temporary_smart->getVolumeLevel());
+				}
+				ui.doubleSpinBox_soft->setValue(temporary_smart->getSoftware());
+				for (auto app : temporary_smart->getApps())
+					ui.listWidget_apps->addItem(QString::fromStdString(app));
+			}
+		}
+};
 
 AddObject::~AddObject()
 {
@@ -35,7 +114,7 @@ SmartTv* AddObject::newSmart()
 		new_smart->setSpeakersStatus(true);
 		new_smart->setSpeakersVolume(ui.spinBox_volume_smart->text().toInt());
 	}
-	new_smart->updateSoftware(ui.doubleSpinBox_soft->text().toDouble());
+	new_smart->updateSoftware(ui.doubleSpinBox_soft->value());
 	for (auto app : apps) {
 		new_smart->addApp(app);
 	}
@@ -104,6 +183,20 @@ void AddObject::submitForm()
 	else if (ui.tabWidget->currentIndex() == 2)
 		createdDevice = newSmart();
 
+	accept();
+}
+
+void AddObject::editSubmit()
+{
+	if (createdDevice->getModel() == "Television") {
+		createdDevice = newTV();
+	}
+	else if (createdDevice->getModel() == "Projector") {
+		createdDevice = newProjector();
+	}
+	else if (createdDevice->getModel() == "SmartTV") {
+		createdDevice = newSmart();
+	}
 	accept();
 }
 

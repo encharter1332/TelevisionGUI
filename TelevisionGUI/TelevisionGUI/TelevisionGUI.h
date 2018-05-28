@@ -18,12 +18,17 @@ class TelevisionGUI : public QMainWindow
 public:
 	TelevisionGUI(QWidget *parent = Q_NULLPTR);
 
+	void disableListView();
 
 	public slots:
 		void loadObjects();
 		void saveObjects();
 		void addObjects();
 		void drawList();
+		void showSelectedObject();
+		void checkIfObjectSelected();
+		void onDeleteClick();
+		void onEditClick();
 
 private:
 	Ui::TelevisionGUIClass ui;

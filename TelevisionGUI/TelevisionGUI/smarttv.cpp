@@ -17,7 +17,6 @@ SmartTv::SmartTv()
 	producer = "producer";
 	model = "model";
 	software = 1.00;
-	apps.push_back("HomeApp");
 } 
 
 void SmartTv::updateSoftware(double new_version)
@@ -106,6 +105,7 @@ std::ostream & operator<<(std::ostream & stream, SmartTv & smarttv)
 	stream << smarttv.software << endl;
 	for (auto app : smarttv.apps)
 		stream << app << endl;
+	stream << "#####" << endl;
 	return stream;
 }
 
@@ -117,12 +117,10 @@ std::istream & operator>>(std::istream & stream, SmartTv & smarttv)
 	stream >> smarttv.software;
 	temp_pos = stream.tellg();
 	getline(stream, line);
-	while (line != "Television" && line != "Projector" && line != "SmartTV" && line != "") {
-		temp_pos = stream.tellg();
+	while (line != "#####") {
 		getline(stream, line);
-		if (line != "Television" && line != "Projector" && line != "SmartTV" && line != "") {
-			smarttv.apps.push_back(line);
-		}
+		if(line != "#####")
+		smarttv.apps.push_back(line);
 	}
 		stream.seekg(temp_pos);
 	return stream;

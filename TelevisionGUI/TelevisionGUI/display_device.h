@@ -4,6 +4,7 @@
 #pragma once
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "working_params.h"
 #include "device_params.h"
 
@@ -57,7 +58,36 @@ public:
 	void setModel(string newModel) { model = newModel; };
 	void setProducer(string newProducer) { producer = newProducer; };
 
+	///Zwracanie typu urzadzenia
+	string getDeviceType() { return device_type; };
+
+	///Zwracanie producenta
+	string getProducer() { return producer; };
+
+	///Zwracanie modelu
+	string getModel() { return model; };
+
+	///Zwracanie oceny
+	int  getRating() { return rating; };
+
+	///Zwracanie deviceParams
+	string getScreenType() { return deviceParams.getScreenType(); };
+	string getScreenSurface() { return (std::to_string(deviceParams.getScreenWidth()) + " x " + std::to_string(deviceParams.getScreenHeight())); };
+	int getScreenHeight() { return deviceParams.getScreenHeight(); };
+	int getScreenWidth() { return deviceParams.getScreenWidth(); };
+
+	///Ustaw jasnosc
+	void setScreenBrightness(int newBrightness) { workingParams->setScreenBrightness(newBrightness); };
+
+	///Pobieranie wartosci working params
+	bool getSignal() { return workingParams->getSignalStatus(); };
+	int getScreenBrightness() { return workingParams->getScreenBrightness(); };
+	WorkingParams* getWorkingParams() { return workingParams; };
+
 protected:
+	///Zmienna zawierajaca wskaznik na parametry pracy (WorkingParams)
+	WorkingParams * workingParams = NULL;
+
 	///Klasa Parametry urzadzenia
 	DeviceParams deviceParams;
 	
