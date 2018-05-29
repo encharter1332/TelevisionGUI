@@ -141,6 +141,7 @@ public:
         if (AddObject->objectName().isEmpty())
             AddObject->setObjectName(QStringLiteral("AddObject"));
         AddObject->resize(764, 660);
+        AddObject->setFocusPolicy(Qt::ClickFocus);
         AddObject->setWindowOpacity(1);
         label = new QLabel(AddObject);
         label->setObjectName(QStringLiteral("label"));
@@ -151,6 +152,7 @@ public:
         pushButton_cancel = new QPushButton(AddObject);
         pushButton_cancel->setObjectName(QStringLiteral("pushButton_cancel"));
         pushButton_cancel->setGeometry(QRect(390, 600, 111, 31));
+        pushButton_cancel->setFocusPolicy(Qt::StrongFocus);
         pushButton_add = new QPushButton(AddObject);
         pushButton_add->setObjectName(QStringLiteral("pushButton_add"));
         pushButton_add->setEnabled(true);
@@ -706,7 +708,7 @@ public:
         QObject::connect(listWidget_apps, SIGNAL(itemClicked(QListWidgetItem*)), AddObject, SLOT(appSelected()));
         QObject::connect(pushButton_add, SIGNAL(clicked()), AddObject, SLOT(submitForm()));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(AddObject);

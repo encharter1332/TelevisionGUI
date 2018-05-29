@@ -14,7 +14,7 @@ class AddObject : public QDialog
 
 public:
 	AddObject(QWidget *parent = Q_NULLPTR);
-	AddObject(DisplayDevice *device_to_edit);
+	AddObject(DisplayDevice* device_to_edit);
 	~AddObject();
 	DisplayDevice* createdDevice = nullptr;
 	DisplayDevice* getDevicePointer() { return createdDevice; };

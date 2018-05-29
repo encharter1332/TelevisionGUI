@@ -5,6 +5,7 @@
 #include "qfile.h"
 #include "qfiledialog.h"
 #include "qmessagebox.h"
+#include "qgraphicsview.h"
 #include "AddObject.h"
 
 TelevisionGUI::TelevisionGUI(QWidget *parent)
@@ -12,6 +13,7 @@ TelevisionGUI::TelevisionGUI(QWidget *parent)
 {
 	ui.setupUi(this);
 	drawList();
+	ui.graphicsView->setScene(&scene);
 	disableListView();
 }
 
@@ -124,7 +126,14 @@ void TelevisionGUI::drawList() {
 
 void TelevisionGUI::showSelectedObject(){
 	int index = ui.listWidget_objects->currentIndex().row();
+	image = collection[index]->getImage();
+
 	ui.listWidget_info->clear();
+	scene.setSceneRect(image.rect());
+	scene.clear();
+	scene.addPixmap(image);
+	ui.graphicsView->fitInView(image.rect());
+
 	ui.listWidget_info->addItem(QString::fromStdString("Typ urzadzenia: " + collection[index]->getDeviceType()));///<- wypiswanie pol wspolnych
 	ui.listWidget_info->addItem(QString::fromStdString("Producent: " + collection[index]->getProducer()));
 	ui.listWidget_info->addItem(QString::fromStdString("Model: " + collection[index]->getModel()));
@@ -190,14 +199,13 @@ void TelevisionGUI::onEditClick() {
 	int index = ui.listWidget_objects->currentIndex().row();
 	AddObject editWindow(collection[index]);
 	editWindow.exec();
-	setVisible(false);
+	hide();
 	if (editWindow.Accepted) {
-		delete collection[index];
 		collection[index] = editWindow.getDevicePointer();
 		disableListView();
 		if (collection[index] != nullptr)
 			drawList();
-		setVisible(true);
+		show();
 		 
 	}
 }

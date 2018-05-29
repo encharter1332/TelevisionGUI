@@ -110,5 +110,8 @@
     <ClInclude Include="GeneratedFiles\ui_TelevisionGUI.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_AddObject.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

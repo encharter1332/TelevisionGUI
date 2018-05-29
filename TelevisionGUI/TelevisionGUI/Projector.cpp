@@ -12,6 +12,7 @@ Projector::Projector()
 	cout << "Uruchomiono konstruktor projektora" << endl;
 #endif
 	object_amount++;
+	image.load("Resources/Projector.png");
 	device_type = "Projector";
 	model = "00kx00";
 	producer = "Random";

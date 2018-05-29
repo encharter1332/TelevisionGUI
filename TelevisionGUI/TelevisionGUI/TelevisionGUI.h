@@ -33,4 +33,7 @@ public:
 private:
 	Ui::TelevisionGUIClass ui;
 	vector <DisplayDevice*> collection;
+	QGraphicsScene scene;
+	QPixmap image;
+
 };

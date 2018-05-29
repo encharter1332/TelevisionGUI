@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "qpixmap.h"
 #include "working_params.h"
 #include "device_params.h"
 
@@ -84,10 +85,16 @@ public:
 	int getScreenBrightness() { return workingParams->getScreenBrightness(); };
 	WorkingParams* getWorkingParams() { return workingParams; };
 
+	///Zwroc obraz
+	QPixmap getImage() { return image; };
+	
 protected:
 	///Zmienna zawierajaca wskaznik na parametry pracy (WorkingParams)
 	WorkingParams * workingParams = NULL;
 
+	///Obraz obiektu
+	QPixmap image;
+	
 	///Klasa Parametry urzadzenia
 	DeviceParams deviceParams;
 	

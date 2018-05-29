@@ -149,6 +149,7 @@
     </QtMoc>
     <ClInclude Include="device_params.h" />
     <ClInclude Include="display_device.h" />
+    <ClInclude Include="GeneratedFiles\ui_AddObject.h" />
     <ClInclude Include="GeneratedFiles\ui_TelevisionGUI.h" />
     <ClInclude Include="projector.h" />
     <ClInclude Include="smarttv.h" />

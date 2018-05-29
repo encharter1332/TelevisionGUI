@@ -12,6 +12,7 @@ SmartTv::SmartTv()
 #ifdef _DEBUG
 	std::cout << "Uruchomiono konstruktor SmartTV" << endl;
 #endif	
+	image.load("Resources/SmartTv.png");
 	object_amount++;
 	device_type = "SmartTV";
 	producer = "producer";
